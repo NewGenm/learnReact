@@ -22,8 +22,8 @@ root.render(
     <Provider store={store}>
       {/* 使用history模式的路由，如果直接包裹app标签，则全体组件都有路由 */}
       <BrowserRouter>
-        {/* <App /> */}
-        <App3></App3>
+        <App />
+        {/* <App3></App3> */}
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

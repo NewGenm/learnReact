@@ -14,30 +14,31 @@ import "./App.css";
 // import Chapter14 from './chapter/chapter14/chapter14';
 // import Chapter15 from './chapter/chapter15/chapter15';
 import Chapter16 from "./chapter/chapter16/chapter16";
+import Chapter17 from "./chapter/chapter17/chapter17";
 import React from "react";
-import { connect } from "react-redux";
 
 function App(props) {
   console.log("app", props);
   return (
     <div>
-      <Chapter16 store={props}></Chapter16>
+      <Chapter17></Chapter17>
     </div>
   );
 }
 
-let newApp = connect((state) => {
-  console.log("state", state);
-  return { ...state };
-},(dispatch) => {
-  return {
-    changeMsg(msg) {
-      return dispatch({
-        type: 'changeMsg',
-        payload: msg
-      })
-    }
-  }
-})(App);
-console.log("newApp", newApp);
-export default newApp;
+// let newApp = connect((state) => {
+//   console.log("state", state);
+//   return { ...state };
+// },(dispatch) => {
+//   return {
+//     changeMsg(msg) {
+//       return dispatch({
+//         type: 'changeMsg',
+//         payload: msg
+//       })
+//     }
+//   }
+// })(App);
+// console.log("newApp", newApp);
+// export default newApp;
+export default App;
